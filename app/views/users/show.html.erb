@@ -12,7 +12,8 @@
 
 <p>
   <strong>First Micropost:</strong>
-  <%= @user.microposts.first.content %> created at: <%= @user.microposts.first.created_at %>
+  <%= @user.microposts.first.nil? ? "n/a" : @user.microposts.first.content %>
+  created at: <%= @user.microposts.first.nil? ? "n/a" : @user.microposts.first.created_at %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
